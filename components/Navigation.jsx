@@ -3,13 +3,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { TbArrowUpRight } from "react-icons/tb";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const nav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/products", label: "Products" },
-  // { href: "/solution", label: "Solution" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/gallery", label: "Gallery" },
 ];
@@ -20,55 +20,76 @@ export default function Navigation() {
 
   return (
     <>
-      <>
-        <button className="block lg:hidden" onClick={() => setOpen(!isOpen)}>
-          <svg
-            className={`fill-current h-3 w-3 ${isOpen ? "hidden" : "block"}`}
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-          <svg
-            className={`fill-current h-3 w-3 ${isOpen ? "block" : "hidden"}`}
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-          </svg>
-        </button>
-
-        <nav
-          className={`lg:flex gap-x-6 transform transition ${
-            isOpen
-              ? "flex flex-col px-8 py-12 z-50  gap-y-6 absolute inset-y-0 bg-white right-0  translate-x-0 "
-              : "hidden max-md:translate-x-full"
-          }`}
+      {/* Mobile Header */}
+      <div className="lg:hidden flex justify-between items-center p-4">
+        <button 
+          onClick={() => setOpen(!isOpen)} 
+          className="text-2xl z-50 relative"
         >
+          {isOpen ? <FiX /> : <FiMenu />}
+        </button>
+      </div>
+      
+      {/* Navigation Container */}
+      <nav
+        className={`lg:mt-0 flex gap-x-6 transform transition-all 
+          max-md:fixed max-md:top-0 max-md:right-0 max-md:w-3/4 
+          max-md:h-screen max-md:bg-white max-md:shadow-lg 
+          ${isOpen ? "max-md:translate-x-0" : "max-md:translate-x-full"}`}
+      >
+        {/* Desktop Navigation Items */}
+        <div className="hidden lg:flex items-center gap-x-6">
           {nav.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={pathname === href ? "text-black font-semibold" : ""}
+              className={`${
+                pathname === href 
+                  ? "text-black font-semibold" 
+                  : "text-gray-700 hover:text-black"
+              } transition-colors`}
             >
               {label}
             </Link>
           ))}
-        </nav>
+        </div>
 
-        <div
-          className={` ${
-            isOpen ? "fixed inset-0 z-30 bg-black bg-opacity-50" : "hidden"
-          } `}
-          onClick={() => setOpen(false)}
-        ></div>
+        {/* Mobile Navigation Items */}
+        <div className="flex flex-col items-start pl-5 mt-10 w-full pr-10 lg:hidden h-full">
+          {nav.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`text-lg py-2 ${
+                pathname === href 
+                  ? "text-black font-semibold" 
+                  : "text-gray-700 hover:text-black"
+              }`}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      </nav>
+
+      {/* Contact Button - Desktop */}
+      <div className="hidden lg:inline-flex">
         <Link
           href="/contact"
-          className="items-center hidden px-5 py-2 font-medium text-gray-800 bg-white border border-gray-600 rounded-full shadow lg:inline-flex hover:bg-gray-100"
+          className="flex items-center px-5 py-2 font-medium text-gray-800 bg-white border border-gray-600 rounded-full shadow hover:bg-gray-100"
         >
           Contact Us <TbArrowUpRight className="w-5 h-5 ml-2" />
         </Link>
-      </>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`lg:hidden fixed inset-0  ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setOpen(false)}
+      />
     </>
   );
 }
