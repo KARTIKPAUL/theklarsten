@@ -1,74 +1,218 @@
-import Image from 'next/image'
-import { TbArrowUpRight } from "react-icons/tb"
+import Image from "next/image";
+import { TbArrowUpRight } from "react-icons/tb";
+
 export default function About() {
-    return (
-        <div>
-            <div className="bg-[url('/image/about.jpg')] bg-center bg-cover ">
-                <h1 className="container py-32 text-6xl font-semibold tracking-widest text-center text-white lg:py-64 lg:text-left ">WHO ARE WE?</h1>
+  return (
+    <div className="overflow-hidden">
+      {/* Hero Section */}
+      <div className="relative h-[60vh] bg-[url('/image/about.jpg')] bg-center bg-cover">
+        <div className="absolute inset-0 bg-black/50 flex items-center">
+          <div className="container">
+            <h1 className="text-5xl font-bold tracking-tight text-white md:text-7xl lg:text-8xl animate-fade-in">
+              About Us
+            </h1>
+          </div>
+        </div>
+      </div>
 
+      {/* Intro Section */}
+      <section className="container py-16 md:py-24">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8 md:text-5xl bg-gradient-to-r from-[#e2581b] to-[#0084c2] bg-clip-text text-transparent">
+            Innovative Design Solutions
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed md:text-xl">
+            At KLARSTEN, we merge cutting-edge technology with artistic vision to create 
+            transformative architectural solutions. Our designs breathe life into spaces 
+            while maintaining functionality and sustainability.
+          </p>
+        </div>
+      </section>
+
+      {/* Image + Text Section */}
+      <section className="container mb-24">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl transform rotate-2 scale-95 group-hover:rotate-1 transition-all"></div>
+            <Image
+              src="/image/gallery1123.jpg"
+              width={800}
+              height={200}
+              alt="Modern Architecture"
+              className="rounded-2xl relative transform transition duration-500 hover:scale-105"
+            />
+          </div>
+          
+          <div className="space-y-6">
+            <h3 className="text-3xl font-bold md:text-4xl">
+              Precision Engineering Meets Creative Vision
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              With decades of expertise, we've redefined modern construction through:
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <TbArrowUpRight className="text-blue-600" />
+                </div>
+                <span className="font-medium">Advanced Thermal Efficiency</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                  <TbArrowUpRight className="text-purple-600" />
+                </div>
+                <span className="font-medium">Sustainable Material Innovation</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <TbArrowUpRight className="text-blue-600" />
+                </div>
+                <span className="font-medium">Custom Architectural Solutions</span>
+              </li>
+            </ul>
+            <button className="group flex items-center gap-2 px-8 py-4 bg-gray-900 text-white rounded-full transition-all hover:bg-gray-800 hover:gap-3">
+              Explore Our Process
+              <TbArrowUpRight className="text-xl transition-transform group-hover:rotate-45" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* uPVC Expertise Section */}
+      <section className="bg-gray-50 py-16 md:py-24">
+        <div className="container grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-600 bg-clip-text text-transparent">
+              Why Choose uPVC?
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              KLARSTEN specializes in high-quality uPVC windows and doors that combine timeless design with exceptional performance. Our products offer unparalleled durability while enhancing property aesthetics with superior functionality, security, and energy efficiency.
+            </p>
+            <div className="space-y-6">
+              <div className="p-6 bg-white rounded-2xl shadow-lg">
+                <h3 className="text-xl font-bold mb-3">Crafted with Precision</h3>
+                <p className="text-gray-600">
+                  Every product undergoes a meticulous manufacturing process combining cutting-edge technology with expert craftsmanship. Engineered for strength and low maintenance, our solutions ensure long-term value for both residential and commercial projects.
+                </p>
+              </div>
+              <div className="p-6 bg-white rounded-2xl shadow-lg">
+                <h3 className="text-xl font-bold mb-3">uPVC Advantages</h3>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <TbArrowUpRight className="text-blue-500" />
+                    Unmatched durability against harsh weather conditions
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <TbArrowUpRight className="text-purple-500" />
+                    Superior energy efficiency with advanced thermal breaks
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <TbArrowUpRight className="text-blue-500" />
+                    Low maintenance and corrosion-resistant
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="container ">
-                <div className="py-4 lg:py-14">
-                    <h2 className="p-4 text-3xl font-semibold text-center lg:p-20 lg:text-5xl">We have great idea & Interior Design</h2>
-                    <p className="text-2xl font-medium lg:w-1/2">
-                        The Digimax interior design company is a company that provides interior design services for homes, offices, apartments, and others. We provide the best interior design services for you. We have a team that is experienced in the field of interior.
-                    </p>
-                </div>
-                <div className="items-center lg:flex gap-x-8">
-                    <div className="w-full">
-                        <Image src="/image/gallery1123.jpg" width={700} height={700} alt="" className="" />
-                    </div>
-                    <div className="">
-                        <p className="pb-8 tracking-wide">
-                            We are an international Architects. We believe that today it is fundamental to totally rethink archi-tectural education. Confluence not only integrates new visions on society but also incorporates new methods and contemporary tools linked to creativity, production and communication. De-signed and handcrafted to hold and showcase my year two architecture portfolio, the unfolding box allows portfolio sheets…
-                            <br />
-                            <br />
+          </div>
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-500 to-purple-600 rounded-2xl transform -rotate-2 scale-95 group-hover:rotate-1 transition-all"></div>
+            <Image
+              src="/image/gallery1123.jpg"
+              width={800}
+              height={600}
+              alt="uPVC Windows"
+              className="rounded-2xl relative transform transition duration-500 hover:scale-105"
+            />
+          </div>
+        </div>
+      </section>
 
-                            We are an international Architects. We believe that today it is fundamental to totally rethink archi-tectural education. Confluence not only integrates new visions on society but also incorporates new methods and contemporary tools linked to creativity, production and communication.
-                            <br />
-                            <br />
-                            <span className="text-xl font-extrabold tracking-tight">The backpiperARCH, we share a belief in the transformational power of people united in a common purpose.</span>
-                        </p>
-                        <a className="inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2" href="">Read More <TbArrowUpRight className="text-xl" /> </a>
-
-
-                    </div>
-                </div>
-                <div className="lg:py-20">
-                    <div className="pt-8 pb-4">
-                        <h1 className="text-4xl font-bold tracking-wider text-center">TEAM</h1>
-                    </div>
-                    <div className="grid gap-20 py-8 lg:grid-cols-3">
-                        <div className="border-2 border-gray-500 ">
-                            <div className="-m-0.5 p-4 text-center transition hover:-translate-y-3 hover:-translate-x-3 aspect-square bg-zinc-100 ">
-                                <Image src="/image/profile2.jpg" width={200} height={200} alt="" className="mx-auto rounded-full " />
-                                <h2 className="py-4 text-2xl font-semibold " >BUILDING SURVEYS</h2>
-                                <p className="text-sm text-gray-400">
-                                    Creativity is the ability to generate, create, or discover new ideas, solutions, and possibilities.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="border-2 border-gray-500 ">
-                            <div className="-m-0.5 p-4 text-center transition hover:-translate-y-3 hover:-translate-x-3 aspect-square bg-zinc-100 ">
-                                <Image src="/image/profile1.jpg" width={200} height={200} alt="" className="mx-auto rounded-full " />
-                                <h2 className="py-4 text-2xl font-semibold " >BUILDING SURVEYS</h2>
-                                <p className="text-sm text-gray-400">
-                                    Creativity is the ability to generate, create, or discover new ideas, solutions, and possibilities.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="border-2 border-gray-500 ">
-                            <div className="-m-0.5 p-4 text-center transition hover:-translate-y-3 hover:-translate-x-3 aspect-square bg-zinc-100 ">
-                                <Image src="/image/profile3.jpg" width={200} height={200} alt="" className="mx-auto rounded-full " />
-                                <h2 className="py-4 text-2xl font-semibold " >BUILDING SURVEYS</h2>
-                                <p className="text-sm text-gray-400">
-                                    Creativity is the ability to generate, create, or discover new ideas, solutions, and possibilities.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      {/* Features Section */}
+      <section className="container py-16 md:py-24">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8 md:text-5xl bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">
+            Smart Design Choices
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 text-left">
+            <div className="p-6 bg-gray-50 rounded-xl">
+              <h3 className="text-xl font-bold mb-4">Advanced Features</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-center gap-2">
+                  <TbArrowUpRight className="text-blue-500" />
+                  Exceptional energy efficiency ratings
+                </li>
+                <li className="flex items-center gap-2">
+                  <TbArrowUpRight className="text-purple-500" />
+                  Wide range of styles and colors
+                </li>
+                <li className="flex items-center gap-2">
+                  <TbArrowUpRight className="text-blue-500" />
+                  Smart contemporary aesthetics
+                </li>
+              </ul>
             </div>
-        </div >
-    )
+            <div className="p-6 bg-gray-50 rounded-xl">
+              <h3 className="text-xl font-bold mb-4">Technical Excellence</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-center gap-2">
+                  <TbArrowUpRight className="text-purple-500" />
+                  High-clarity glass options
+                </li>
+                <li className="flex items-center gap-2">
+                  <TbArrowUpRight className="text-blue-500" />
+                  Enhanced security features
+                </li>
+                <li className="flex items-center gap-2">
+                  <TbArrowUpRight className="text-purple-500" />
+                  Custom sizing and configurations
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="bg-gray-50 py-24">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 md:text-5xl">Creative Minds</h2>
+            <p className="text-gray-600 max-w-xl mx-auto">
+              Our team of visionaries combines technical expertise with artistic passion
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="group relative overflow-hidden rounded-3xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={`/image/profile${item}.jpg`}
+                    width={600}
+                    height={800}
+                    alt="Team member"
+                    className="w-full h-96 object-cover transform transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                </div>
+                
+                <div className="p-6 absolute bottom-0 left-0 right-0">
+                  <h3 className="text-xl font-bold text-white mb-2">Lead Designer</h3>
+                  <p className="text-gray-200">Specializing in Sustainable Architecture</p>
+                  
+                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex space-x-4">
+                      <button className="p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition">
+                        <TbArrowUpRight className="text-white text-xl" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }

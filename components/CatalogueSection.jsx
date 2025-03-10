@@ -6,31 +6,31 @@ export default function CatalogueSection() {
     const items = [
         {
             id: "01",
-            catagory: "BEDROOM SETUP",
-            title: "Cossy Bedroom Setup",
+            catagory: "NOISE INSULATION",
+            title: "Cossy Noise Insulation",
             image: "/image/badroom.jpg",
-            description: "family drowing room with a clean and comfortable design for your family.",
+            description: "Our uPVC windows provide excellent sound insulation, reducing the noise from the outside. Whether you live ina busy urban area or near a noisy street.",
         },
         {
             id: "02",
-            catagory: "KITCHING SETUP",
-            title: "Neat & Clean Kitchen",
+            catagory: "ENERGY EFFiCIENCY",
+            title: "Neat & Energy Efficiency",
             image: "/image/kitchen1.jpg",
-            description: "family drowing room with a clean and comfortable design for your family.",
+            description: "Our uPVC windows provide superior insulation compared to traditional materials, helping to keep your homecooler in the summer and warmer in the winter.",
         },
         {
             id: "03",
-            catagory: "DROWING SETUP",
-            title: "Family Drowing Room",
+            catagory: "ENHANCED SECURITY",
+            title: "Enhanced Security",
             image: "/image/drowing.jpg",
-            description: "family drowing room with a clean and comfortable design for your family.",
+            description: "uPVC windows are equipped with robust locking mechanisms and are far less prone to breakage compared to traditional wooden or aluminum windows.",
         },
         {
             id: "04",
-            catagory: "LIVING SETUP",
-            title: "Clean Family Room",
+            catagory: "AESTHETIC FLEXIBILIY",
+            title: "Aesthetic Flexibility",
             image: "/image/living.jpg",
-            description: "family drowing room with a clean and comfortable design for your family.",
+            description: "Our uPVC windows are available in a wide range of styles, colours, and finishes, offering versatility to suit any architectural design. Unlike traditional wooden",
         },
     ]
 
