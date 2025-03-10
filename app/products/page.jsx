@@ -1,3 +1,4 @@
+"use client"
 import { TbArrowUpRight, TbArrowUpRightCircle } from "react-icons/tb";
 import {
   FaShieldAlt,
