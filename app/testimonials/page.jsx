@@ -186,7 +186,7 @@ const Testimonials = () => {
                         <div className="mb-4 flex">{renderStars(testimonial.rating)}</div>
                       </div>
                       <p className="text-gray-700 text-center italic flex-grow">
-                      {testimonial.feedback}"
+                      {testimonial.feedback}
                       </p>
                     </div>
                   </div>

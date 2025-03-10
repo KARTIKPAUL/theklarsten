@@ -113,7 +113,7 @@ export default function Product() {
           <div className="rounded-xl overflow-hidden shadow-xl">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/2">
-                <img
+                <Image
                   src="https://images.pexels.com/photos/18526716/pexels-photo-18526716/free-photo-of-blue-curtain-in-window.jpeg?auto=compress&cs=tinysrgb&w=600"
                   alt="Premium Sliding Door System"
                   className="h-full w-full object-cover"
