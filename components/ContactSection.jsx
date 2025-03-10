@@ -13,7 +13,7 @@ export default function ContactSection() {
                     <div className="space-y-6 text-left">
                         <div className="relative inline-block">
                             <span className="text-lg font-medium text-amber-600 uppercase tracking-widest">
-                                Let's Collaborate
+                                Let &apos s Collaborate
                             </span>
                             <div className="absolute bottom-0 left-0 w-16 h-0.5 bg-amber-600 animate-line-expand" />
                         </div>

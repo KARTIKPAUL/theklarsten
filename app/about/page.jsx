@@ -48,7 +48,7 @@ export default function About() {
               Precision Engineering Meets Creative Vision
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              With decades of expertise, we've redefined modern construction through:
+              With decades of expertise, we have redefined modern construction through:
             </p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">

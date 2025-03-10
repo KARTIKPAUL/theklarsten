@@ -42,7 +42,7 @@ export default function TermsConditions() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-2">5. Changes to Terms</h2>
           <p className="text-gray-600">
-            We reserve the right to modify these Terms & Conditions at any time. Changes will be posted on this page with an updated "Last Updated" date.
+            We reserve the right to modify these Terms & Conditions at any time. Changes will be posted on this page with an updated 10/03/2025 date.
           </p>
         </section>
 

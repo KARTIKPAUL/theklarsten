@@ -29,7 +29,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="bg-white shadow-lg p-8 rounded-lg">
             <h2 className="text-[#E35A1E] text-3xl font-bold">Get in Touch With Us</h2>
-            <p className="text-lg text-gray-600 mt-2">We're here to help and answer any question you might have.</p>
+            <p className="text-lg text-gray-600 mt-2">We are here to help and answer any question you might have.</p>
             <div className="mt-6 space-y-6">
               <div className="flex items-center space-x-4">
                 <FaPhoneAlt className="text-[#E35A1E] text-2xl" />

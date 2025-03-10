@@ -30,7 +30,7 @@ export default function AboutComponent() {
             process that combines cutting-edge technology with expert
             craftsmanship. Ourproducts are engineered for strength, energy
             efficiency, andlow maintenance, ensuring long-term value andsecurity
-            for our clients. Whether you're upgrading yourhome, outfitting a
+            for our clients. Whether you are upgrading yourhome, outfitting a
             commercial space, or embarking on a large-scale development project,
             our custom-made solutions are tailored to meet your needs andexceed
             your expectations.

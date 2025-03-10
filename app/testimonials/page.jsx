@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -173,7 +174,7 @@ const Testimonials = () => {
                   >
                     <div className="bg-white shadow-lg rounded-lg p-8 h-full flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
                       <div className="flex flex-col items-center">
-                        <img
+                        <Image
                           src={testimonial.image}
                           alt={testimonial.name}
                           className="w-20 h-20 rounded-full object-cover border-4 border-amber-100 mb-4"
@@ -185,7 +186,7 @@ const Testimonials = () => {
                         <div className="mb-4 flex">{renderStars(testimonial.rating)}</div>
                       </div>
                       <p className="text-gray-700 text-center italic flex-grow">
-                        "{testimonial.feedback}"
+                      {testimonial.feedback}"
                       </p>
                     </div>
                   </div>
